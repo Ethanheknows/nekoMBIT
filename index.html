@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <title>私だけいねえよ猫ちゃん！ by 명현</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- google 웹폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+    />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/mbti.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>私だけいねえよ<strong>猫ちゃん！</strong></h1>
+      <br />
+      <p class="today"></p>
+    </header>
+    <div class="start content on">
+      <div class="inner">
+        <h2>どんな猫ちゃんが自分と良く合うんだろ？</h2>
+        <button class="btn">TEST初め</button>
+      </div>
+    </div>
+    <div class="question content">
+      <div class="inner">
+        <div class="progress">
+          <div class="bar"></div>
+        </div>
+        <div class="question-box">문제나오는곳</div>
+        <div class="btns">
+          <button class="btn type01">첫번째</button>
+          <button class="btn type02">두번째</button>
+        </div>
+      </div>
+    </div>
+    <div class="result content">
+      <div class="inner">
+        <h2>あなたの猫ちゃんは</h2>
+        <img src="" alt="" class="cat-img" />
+        <p>あなたのよく合う猫ちゃんは <strong class="cat-type"></strong></p>
+        <p class="cat-desc"></p>
+      </div>
+    </div>
+  </body>
+</html>
