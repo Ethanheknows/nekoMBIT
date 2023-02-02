@@ -222,7 +222,7 @@ const catType = document.querySelector(".result .cat-type");
 const catImages = document.querySelector(".result .cat-img");
 const catDesc = document.querySelector(".result .cat-desc");
 Kakao.init("bf68f556eb9ab29cd87a0f44df349c1a");
-const url = "https://ethansnekotest.netlify.app";
+let url = "https://ethansnekotest.netlify.app";
 const btnKakao = document.querySelector(".result .btn-kakao");
 
 btnStart.addEventListener("click", function () {
@@ -240,8 +240,8 @@ btnKakao.addEventListener("click", function () {
     objectType: "feed",
     content: {
       title: "나만없어 고양이 일본판",
-      description: "당신이 선택한 고양이는 ",
-      imageUrl: `${url}/img/cat/Munchkin.jpg`,
+      description: `당신이 선택한 고양이는 ${selectedData.name}`,
+      imageUrl: `${url}/img/cat/${selectedData.image}.jpg`,
       link: {
         mobileWebUrl: url,
         webUrl: url,
@@ -259,13 +259,14 @@ btnKakao.addEventListener("click", function () {
       {
         title: "앱으로 이동",
         link: {
-          mobileWebUrl: "https://developers.kakao.com",
-          webUrl: "https://developers.kakao.com",
+          mobileWebUrl: url,
+          webUrl: url,
         },
       },
     ],
   });
 });
+let selectedData = null;
 let count = 1;
 questionBox.textContent = QuestionData[0].title;
 type01.textContent = QuestionData[0].answera;
@@ -299,7 +300,7 @@ function clickFunc(point) {
       }
     }, "");
 
-    const selectedData = ResultData.find(function (item) {
+    selectedData = ResultData.find(function (item) {
       if (item.best === mbti) {
         return item;
       }
