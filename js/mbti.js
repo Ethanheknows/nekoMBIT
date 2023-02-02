@@ -223,7 +223,8 @@ const catImages = document.querySelector(".result .cat-img");
 const catDesc = document.querySelector(".result .cat-desc");
 Kakao.init("bf68f556eb9ab29cd87a0f44df349c1a");
 const url = "https://ethansnekotest.netlify.app";
-const btnKakao = document.querySelector(".result .btn-kakao");
+const btnKakao = document.querySelector(".result .share");
+const btnReplay = document.querySelector(".result .replay");
 
 btnStart.addEventListener("click", function () {
   start.classList.remove("on");
@@ -318,4 +319,17 @@ type01.addEventListener("click", function () {
 
 type02.addEventListener("click", function () {
   clickFunc(0);
+});
+
+btnReplay.addEventListener("click", function () {
+  start.classList.add("on");
+  result.classList.remove("on");
+  score = [
+    { id: "EI", num: 0 },
+    { id: "SN", num: 0 },
+    { id: "TF", num: 0 },
+    { id: "JP", num: 0 },
+  ];
+  count = 1;
+  bar.style.width = 0 + "%";
 });

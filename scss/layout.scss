@@ -156,16 +156,24 @@ button {
       line-height: 1.5;
     }
     .btn-kakao {
+      font-size: 18px;
+      font-weight: 700;
       display: flex;
+      justify-content: space-between;
       align-items: center;
       margin-top: 30px;
       padding: 15px 30px;
       background-color: #fff;
       border-radius: 5px;
+      gap: 10px;
       .kakao-tag {
         padding: 0 10px;
         width: 30px;
         aspect-ratio: 1/1;
+      }
+      .replay {
+        span {
+        }
       }
     }
   }
