@@ -166,4 +166,5 @@ button {
 .result .inner .btn-kakao .kakao-tag {
   padding: 0 10px;
   width: 30px;
+  aspect-ratio: 1/1;
 }
