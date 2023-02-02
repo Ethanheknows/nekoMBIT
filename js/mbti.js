@@ -202,12 +202,13 @@ const ResultData = [
     image: `Mainecoon`,
   },
 ];
-let score = [
-  { id: "EI", num: 0 },
-  { id: "SN", num: 0 },
-  { id: "TF", num: 0 },
-  { id: "JP", num: 0 },
-];
+
+function shuffleArray(array) {
+  array.sort(() => Math.random() - 0.5);
+}
+
+shuffleArray(QuestionData);
+console.log(QuestionData);
 
 const btnStart = document.querySelector(".start .btn");
 const start = document.querySelector(".start");
@@ -220,13 +221,19 @@ const type02 = document.querySelector(".question .type02");
 const catType = document.querySelector(".result .cat-type");
 const catImages = document.querySelector(".result .cat-img");
 const catDesc = document.querySelector(".result .cat-desc");
+const url = "https://ethansnekotest.netlify.app";
 
 btnStart.addEventListener("click", function () {
   start.classList.remove("on");
   question.classList.add("on");
 });
-
-let count = 0;
+let score = [
+  { id: "EI", num: 0 },
+  { id: "SN", num: 0 },
+  { id: "TF", num: 0 },
+  { id: "JP", num: 0 },
+];
+let count = 1;
 questionBox.textContent = QuestionData[0].title;
 type01.textContent = QuestionData[0].answera;
 type02.textContent = QuestionData[0].answerb;
