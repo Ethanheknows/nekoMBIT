@@ -221,7 +221,9 @@ const type02 = document.querySelector(".question .type02");
 const catType = document.querySelector(".result .cat-type");
 const catImages = document.querySelector(".result .cat-img");
 const catDesc = document.querySelector(".result .cat-desc");
+Kakao.init("bf68f556eb9ab29cd87a0f44df349c1a");
 const url = "https://ethansnekotest.netlify.app";
+const btnKakao = document.querySelector(".result .btn-kakao");
 
 btnStart.addEventListener("click", function () {
   start.classList.remove("on");
@@ -233,6 +235,37 @@ let score = [
   { id: "TF", num: 0 },
   { id: "JP", num: 0 },
 ];
+btnKakao.addEventListener("click", function () {
+  Kakao.Share.sendDefault({
+    objectType: "feed",
+    content: {
+      title: "나만없어 고양이 일본판",
+      description: "당신이 선택한 고양이는 ",
+      imageUrl: `${url}/img/cat/Munchkin.jpg`,
+      link: {
+        mobileWebUrl: url,
+        webUrl: url,
+      },
+    },
+
+    buttons: [
+      {
+        title: "고양이 테스트 하고 싶다면 클릭",
+        link: {
+          mobileWebUrl: url,
+          webUrl: url,
+        },
+      },
+      {
+        title: "앱으로 이동",
+        link: {
+          mobileWebUrl: "https://developers.kakao.com",
+          webUrl: "https://developers.kakao.com",
+        },
+      },
+    ],
+  });
+});
 let count = 1;
 questionBox.textContent = QuestionData[0].title;
 type01.textContent = QuestionData[0].answera;
