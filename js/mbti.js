@@ -222,7 +222,7 @@ const catType = document.querySelector(".result .cat-type");
 const catImages = document.querySelector(".result .cat-img");
 const catDesc = document.querySelector(".result .cat-desc");
 Kakao.init("bf68f556eb9ab29cd87a0f44df349c1a");
-let url = "https://ethansnekotest.netlify.app";
+const url = "https://ethansnekotest.netlify.app";
 const btnKakao = document.querySelector(".result .btn-kakao");
 
 btnStart.addEventListener("click", function () {
