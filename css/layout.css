@@ -156,8 +156,14 @@ button {
   line-height: 1.5;
 }
 .result .inner .btn-kakao {
+  display: flex;
+  align-items: center;
   margin-top: 30px;
   padding: 15px 30px;
   background-color: #fff;
   border-radius: 5px;
+}
+.result .inner .btn-kakao .kakao-tag {
+  padding: 0 10px;
+  width: 30px;
 }
